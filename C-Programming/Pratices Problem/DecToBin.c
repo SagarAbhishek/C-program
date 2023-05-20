@@ -1,18 +1,17 @@
 #include<stdio.h>
-
-char Binary(int d){
-    char a[];
-    if(d%2==0){   
-        return 1 
-    }
-    else{
-        return 0
-    }
-}
-
 void main(){
-    int n;
+    int n,d,num;
     printf("Enter the number in decimal:");
     scanf("%d",&n);
-    printf("%s",Binary(n));
+    num=n;
+    int a[10],i=0;
+    while(n){
+        a[i]=n%2;
+        n=n/2;
+        i++;
+    }
+    printf("The %d in binary number is:\n",num);
+    for (int j=i-1;j>=0;j--){
+        printf("%d",a[j]);
+    }
 }
